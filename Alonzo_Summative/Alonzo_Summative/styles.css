@@ -1,0 +1,242 @@
+/* Universal Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Added transition for all elements to enable smooth animations */
+    transition: all 0.3s ease; 
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for full-width navbar line */
+.navbar-container {
+    width: 100%;
+    /* Navbar line thickness set to 1px (or change this value for a deeper line) */
+    border-bottom: 3px solid #000000; 
+}
+
+/* Inner navbar content (keeps the content aligned with the rest of the body) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px; /* Centering padding applied here */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+.logo a:hover {
+    opacity: 0.8;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Navbar link animation on hover */
+.navbar nav ul li a:hover {
+    color: #00008b; 
+    padding-bottom: 2px;
+    border-bottom: 2px solid #00008b; 
+}
+
+/* --- ACTIVE PAGE STYLES --- */
+.navbar nav ul li .active-page {
+    color: #00008b; /* Current page link color */
+    padding-bottom: 2px;
+    border-bottom: 2px solid #00008b; /* Permanent underline for active page */
+}
+
+
+/* --- Main Content Layout --- */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px 0 100px; /* Centering padding applied here */
+    flex-grow: 1;
+}
+
+.bio-and-links {
+    flex: 1;
+    max-width: 60%;
+}
+
+/* Text animation: Subtle hover on social links */
+.social-links ul li a:hover {
+    color: #00008b;
+    text-decoration: underline;
+}
+
+/* --- Typography Styling (Unchanged) --- */
+.bio-and-links h1 {
+    color: #00008b;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.bio-and-links h2 {
+    color: #555;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00008b;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.bio-and-links p {
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.project-list, .social-links {
+    margin-top: 20px;
+}
+
+.project-list h3, .social-links h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.project-list ul, .social-links ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.project-list ul li::before, .social-links ul li::before {
+    content: "\2022";
+    color: #000;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.project-list ul li, .social-links ul li {
+    margin-bottom: 5px;
+}
+
+/* --- Image Area Styling (Placeholders) --- */
+.image-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 650px;
+}
+
+/* Main Photo Placeholder Styling (Deepened Shadow) */
+.main-photo-placeholder {
+    width: 450px;
+    height: 600px;
+    background-color: #ddd;
+    border: none; /* Shadow defines the border */
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-style: italic;
+    /* Deepened Shadow */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+}
+
+/* ACS App Screenshot Placeholder Styling */
+.acs-app-placeholder {
+    width: 200px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* Deepened Shadow */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+    z-index: 2;
+    position: absolute;
+    right: 320px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-style: italic;
+}
+
+/* CMO Site Screenshot Placeholder Styling */
+.cmo-site-placeholder {
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* Deepened Shadow */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+    z-index: 3;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-style: italic;
+}
+
+/* IMAGE FIT STYLES */
+.main-photo-placeholder img,
+.acs-app-placeholder img,
+.cmo-site-placeholder img {
+    width: 100%;
+    height: 100%;
+    /* Fills the container box, potentially stretching the image */
+    object-fit: fill; 
+    object-position: center;
+}
+
+/* IMAGE HOVER ANIMATION */
+/* Applies a subtle lift and small scale on hover to all image containers */
+.shadow-effect:hover {
+    transform: translateY(-5px) scale(1.02); /* Lifts and slightly enlarges the container */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Makes the shadow more prominent on hover */
+    z-index: 10; /* Ensures the hovered image is on top */
+}
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    padding: 20px 100px; 
+    font-size: 0.8em;
+    color: #888;
+    margin-top: auto;
+}

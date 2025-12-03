@@ -1,0 +1,218 @@
+/* Universal Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif; /* CHANGED FONT TO LEXEND */
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 0 40px; /* Padding for the entire page content as seen in the image */
+}
+
+/* --- Include Lexend Font in HTML Header --- */
+/* NOTE: You must also update your index.html <head> section to include the Lexend font link:
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+*/
+
+/* --- Header / Navbar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee; /* Subtle separator line */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.search-bar input {
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    width: 200px; /* Adjust width as needed */
+}
+
+.search-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    height: 100%;
+    font-size: 1em;
+    line-height: 1;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar nav ul .dots {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 5px; /* Adjust spacing for the dots */
+}
+
+/* --- Main Content Layout --- */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.bio-and-links {
+    flex: 1;
+    max-width: 60%; /* Adjust to control the text column width */
+}
+
+/* --- Typography Styling --- */
+.bio-and-links h1 {
+    color: #00008b; /* Navy/Dark Blue - approximate color from image */
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.bio-and-links h2 {
+    color: #555;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00008b; /* Separator line under the subheader */
+    padding-bottom: 5px;
+    display: inline-block; /* Makes the border only as wide as the text */
+}
+
+.bio-and-links p {
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.project-list, .social-links {
+    margin-top: 20px;
+}
+
+.project-list h3, .social-links h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.project-list ul, .social-links ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 20px; /* Add space for custom bullets/icons */
+}
+
+.project-list ul li::before, .social-links ul li::before {
+    content: "\2022"; /* Unicode for a solid bullet point */
+    color: #000; /* Color of the bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.project-list ul li, .social-links ul li {
+    margin-bottom: 5px;
+}
+
+/* --- Image Area Styling (Placeholders) --- */
+.image-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 500px; /* Ensure space for the image layout */
+}
+
+/* Main Photo Placeholder Styling */
+.main-photo-placeholder {
+    width: 350px;
+    height: 400px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    z-index: 1; /* Ensure it is behind the floating images */
+    position: absolute;
+    right: 0;
+    top: 50px; /* Example positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* This will be the main photo holder */
+    font-style: italic;
+}
+
+/* ACS App Screenshot Placeholder Styling (Floating on top-left of main image) */
+.acs-app-placeholder {
+    width: 150px;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 2;
+    position: absolute;
+    right: 250px; /* Position relative to the main image */
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* This will be the app screenshot holder */
+    font-style: italic;
+}
+
+/* CMO Site Screenshot Placeholder Styling (Floating on bottom-right of main image) */
+.cmo-site-placeholder {
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 3;
+    position: absolute;
+    right: 20px;
+    bottom: 50px; /* Position relative to the main image or bottom of image-area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* This will be the website screenshot holder */
+    font-style: italic;
+}
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 50px;
+}
