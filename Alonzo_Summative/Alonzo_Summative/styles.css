@@ -1000,126 +1000,80 @@ footer {
 
 .contact-header {
     margin-bottom: 40px;
+    text-align: center;
 }
 
-/* Contact Layout */
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+/* Contact Info Grid */
+.contact-info-main {
     margin-bottom: 60px;
 }
 
-.contact-form-container h3,
-.contact-info-container h3 {
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-card .contact-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
     color: #00008b;
     font-size: 1.3em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.contact-card p {
+    margin: 0;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 12px;
-    border: 2px solid #ddd;
-    font-family: 'Lexend', sans-serif;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #00008b;
-}
-
-.submit-btn {
-    padding: 12px 30px;
-    background-color: #00008b;
-    color: #fff;
-    border: none;
-    font-family: 'Lexend', sans-serif;
-    font-size: 1em;
-    font-weight: 500;
-    cursor: pointer;
-    align-self: flex-start;
-}
-
-.submit-btn:hover {
-    background-color: #000066;
-}
-
-/* Contact Info */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-item {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-}
-
-.contact-icon {
-    font-size: 1.5em;
-    min-width: 30px;
-}
-
-.contact-details h4 {
-    color: #00008b;
-    margin-bottom: 5px;
-}
-
-.contact-details a {
+.contact-card a {
     color: #333;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.contact-details a:hover {
+.contact-card a:hover {
     color: #00008b;
     text-decoration: underline;
 }
 
 /* Social Media Section */
-.social-media-section {
-    margin-top: 30px;
+.social-media-main {
+    margin-bottom: 60px;
 }
 
-.social-media-section h4 {
+.social-media-main .section-heading {
+    font-size: 1.8em;
+    font-weight: 700;
     color: #00008b;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .social-links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .social-link {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background-color: #f9f9f9;
     text-decoration: none;
     color: #333;
@@ -1132,55 +1086,32 @@ footer {
 }
 
 .social-icon {
-    font-size: 2em;
-    margin-bottom: 5px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-/* Availability Notice */
-.availability-notice {
-    margin-top: 30px;
-    padding: 20px;
+/* Availability Section */
+.availability-section {
+    margin-bottom: 40px;
+}
+
+.availability-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
     background-color: #f9f9f9;
     border-left: 4px solid #00008b;
 }
 
-.availability-notice h4 {
+.availability-card h3 {
     color: #00008b;
-    margin-bottom: 10px;
+    font-size: 1.3em;
+    margin-bottom: 15px;
 }
 
-/* Map Section */
-.map-section {
-    margin-bottom: 60px;
-}
-
-.map-placeholder {
-    height: 400px;
-    background-color: #ddd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-}
-
-.map-note {
-    font-style: italic;
-    font-size: 0.9em;
-    margin-top: 10px;
-}
-
-/* Contact CTA */
-.contact-cta {
-    text-align: center;
-    padding: 40px;
-    background-color: #f9f9f9;
-}
-
-.contact-cta h3 {
-    color: #00008b;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.availability-card p {
+    color: #555;
+    margin: 0;
 }
 
 
@@ -1216,12 +1147,8 @@ footer {
     .pricing-grid,
     .process-steps,
     .testimonials-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Contact layout */
-    .contact-layout {
+    .skills-grid,
+    .contact-info-grid {
         grid-template-columns: 1fr;
     }
     
